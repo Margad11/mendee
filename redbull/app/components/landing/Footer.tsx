@@ -16,7 +16,7 @@ export function Footer() {
         <div>
           <div className="flex items-center gap-3">
             <span className="grid h-10 w-10 place-items-center rounded-md bg-white text-sm font-black text-black">
-              MX
+              MXghvhgh
             </span>
             <div>
               <p className="text-sm font-black uppercase tracking-[0.28em]">Apex Energy</p>
