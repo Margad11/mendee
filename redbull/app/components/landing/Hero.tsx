@@ -1,14 +1,23 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { ArrowDownRight, Play } from "lucide-react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useState } from "react";
-import { BikeScene } from "./BikeScene";
 import { SiteCopy } from "./data";
 
 type HeroProps = {
   copy: SiteCopy;
 };
+
+type BikeSceneProps = {
+  mouse: { x: number; y: number };
+};
+
+const BikeScene = dynamic<BikeSceneProps>(() => import("./BikeScene").then((mod) => mod.BikeScene), {
+  ssr: false,
+  loading: () => <div className="h-full w-full animate-pulse bg-white/5" />,
+});
 
 export function Hero({ copy }: HeroProps) {
   const [sceneMouse, setSceneMouse] = useState({ x: 0, y: 0 });
