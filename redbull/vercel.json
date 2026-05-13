@@ -1,0 +1,4 @@
+{
+  "installCommand": "npm ci --include=optional --workspaces=false",
+  "buildCommand": "npm run build"
+}
