@@ -1,0 +1,13 @@
+{
+  "name": "margad",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix redbull run dev",
+    "build": "npm --prefix redbull run build",
+    "start": "npm --prefix redbull run start",
+    "lint": "npm --prefix redbull run lint"
+  },
+  "workspaces": [
+    "redbull"
+  ]
+}
